@@ -1,2 +1,2 @@
 # epply-new-ui
-Epply refactoring scss to tailwind.
+Epply refactoring scss to tailwind..
