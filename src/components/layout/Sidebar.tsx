@@ -15,7 +15,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { name: 'Dashboard', href: '/dashboard', icon: 'ki-outline ki-home' },
+  { name: 'Dashboard', href: '/', icon: 'ki-outline ki-home' },
   {
     name: 'Profil',
     icon: 'ki-outline ki-profile-circle',
@@ -48,7 +48,7 @@ const Sidebar = () => {
                 <div>
                   <button
                     onClick={() => toggleMenu(item.name)}
-                    className="hover:bg-surface-secondary flex w-full cursor-pointer items-center justify-between rounded px-4 py-2.5 text-[15px] text-gray-800 transition-colors duration-200"
+                    className="hover:bg-surface-secondary flex w-full cursor-pointer items-center justify-between rounded px-4 py-2 text-[15px] text-gray-800 transition-colors duration-200"
                   >
                     <div className="flex items-center">
                       <i className={`${item.icon} mr-2 text-[16px]`}></i>
@@ -85,7 +85,7 @@ const Sidebar = () => {
               ) : (
                 <Link
                   to={item.href!}
-                  className="hover:bg-primary-500 flex items-center rounded px-4 py-2.5 text-[15px] text-gray-800 transition-all duration-300 hover:text-white"
+                  className="hover:bg-primary-500 flex items-center rounded px-4 py-2 text-[15px] text-gray-800 transition-all duration-300 hover:text-white"
                 >
                   <i className={`${item.icon} mr-2 text-[16px]`}></i>
                   <span className="font-medium">{item.name}</span>
