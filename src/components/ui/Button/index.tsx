@@ -15,16 +15,16 @@ interface ButtonProps extends ComponentProps {
 
 const colorClasses = {
   primary:
-    'bg-primary-500 text-white hover:bg-primary-700 active:bg-primary-900 disabled:bg-primary-200 disabled:text-gray-600',
+    'bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-900 disabled:bg-primary-200 disabled:text-gray-600',
   secondary:
-    'bg-secondary-500 text-gray-500 hover:bg-secondary-700 hover:text-gray-950 active:bg-secondary-900 disabled:bg-secondary-200 disabled:text-gray-600',
+    'bg-secondary-500 text-gray-500 hover:bg-secondary-600 hover:text-gray-950 active:bg-secondary-900 disabled:bg-secondary-200 disabled:text-gray-600',
   success:
-    'bg-success-500 text-white hover:bg-success-700 active:bg-success-900 disabled:bg-success-200 disabled:text-gray-600',
-  info: 'bg-info-500 text-white hover:bg-info-700 active:bg-info-900 disabled:bg-info-200 disabled:text-gray-600',
+    'bg-success-500 text-white hover:bg-success-600 active:bg-success-900 disabled:bg-success-200 disabled:text-gray-600',
+  info: 'bg-info-500 text-white hover:bg-info-600 active:bg-info-900 disabled:bg-info-200 disabled:text-gray-600',
   warning:
-    'bg-warning-500 text-white hover:bg-warning-700 active:bg-warning-900 disabled:bg-warning-200 disabled:text-gray-600',
+    'bg-warning-500 text-white hover:bg-warning-600 active:bg-warning-900 disabled:bg-warning-200 disabled:text-gray-600',
   danger:
-    'bg-error-500 text-white hover:bg-error-700 active:bg-error-900 disabled:bg-error-200 disabled:text-gray-600',
+    'bg-error-500 text-white hover:bg-error-600 active:bg-error-900 disabled:bg-error-200 disabled:text-gray-600',
   brand:
     'bg-brand-600 text-white hover:bg-brand-600/90 active:bg-brand-600/80 disabled:bg-brand-50 disabled:text-gray-600',
   neutral:
