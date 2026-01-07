@@ -1,10 +1,21 @@
+import Button from "@/components/ui/Button"
+
 const DashboardPage = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Button color="primary" size="large">
+            Go to Login
+        </Button>
+        <Button color="secondary" size="medium" leftIcon={<span>🔐</span>}>
+            Go to Signup
+        </Button>
+        <Button color="success" size="small" to="/dashboard" rightIcon={<span>➡️</span>}>
+            Go to Dashboard
+        </Button>
+        <Button color="primary" size="small" fullWidth>
+            Go to Full Width
+        </Button>
       </div>
-    </div>
   )
 }
 
