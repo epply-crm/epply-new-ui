@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import LogoURL from '../../assets/images/logo/epply-logo.png';
-import { Button } from '@/components/ui';
+import { Button, IconButton } from '@/components/ui';
 
 const Logo = () => {
   return (
@@ -12,8 +12,8 @@ const Logo = () => {
 
 const HeaderMenuItem = () => {
   const headerMenu = [
-    { name: 'Features', path: '/features' },
-    { name: 'Pricing', path: '/pricing' },
+    { name: 'Panel', path: '/' },
+    { name: 'Görevler', path: '/task' },
   ];
 
   return (
@@ -41,16 +41,33 @@ const HeaderRightMenu = () => {
         color="secondary"
         size="small"
         leftIcon={<i className="ki-outline ki-plus"></i>}
+        to="/student/add"
       >
         Öğrenci Ekle
       </Button>
+
+      <IconButton
+        icon={<i className="ki-outline ki-notification"></i>}
+        variant="ghost"
+        color="neutral"
+        rounded
+        ariaLabel="Bildirimler"
+      />
+
+      <IconButton
+        icon={<i className="ki-outline ki-profile-circle"></i>}
+        variant="filled"
+        color="primary"
+        rounded
+        ariaLabel="Profil"
+      />
     </div>
   );
 };
 
 const Header = () => {
   return (
-    <header className="fixed top-0 right-0 left-0 z-10 flex h-16 items-center justify-between border-b border-gray-200 bg-white shadow-sm">
+    <header className="fixed top-0 right-0 left-0 z-10 flex h-16 items-center justify-between border-b border-gray-200 bg-white shadow-xs">
       <Logo />
       <HeaderMenuItem />
       <HeaderRightMenu />
