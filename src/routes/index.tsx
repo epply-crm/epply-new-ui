@@ -1,9 +1,14 @@
-import { createBrowserRouter } from 'react-router-dom'
-import { DashboardPage } from '@/features/dashboard'
-import { LoginPage, ForgotPasswordPage } from '@/features/auth'
-import { MainLayout, AuthLayout } from '@/components/layout'
+import { createBrowserRouter } from 'react-router-dom';
+import { DashboardPage } from '@/features/dashboard';
+import { LoginPage, ForgotPasswordPage } from '@/features/auth';
+import { NotFoundPage } from '@/features/common';
+import { MainLayout, AuthLayout } from '@/components/layout';
 
 export const router = createBrowserRouter([
+  {
+    path: '*',
+    element: <NotFoundPage />,
+  },
   // Auth routes
   {
     path: '/auth',
@@ -34,5 +39,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-])
-
+]);
