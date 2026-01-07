@@ -1,15 +1,15 @@
-import { Outlet } from 'react-router-dom'
-import Header from './Header'
-import Sidebar from './Sidebar'
-import Footer from './Footer'
+import { Outlet } from 'react-router-dom';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex min-h-screen flex-col">
       <Header />
       <div className="flex flex-1 pt-16">
         <Sidebar />
-        <main className="flex-1 ml-64 bg-gray-50">
+        <main className="ml-64 flex-1">
           <div className="p-6">
             <Outlet />
           </div>
@@ -17,8 +17,7 @@ const MainLayout = () => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default MainLayout
-
+export default MainLayout;
