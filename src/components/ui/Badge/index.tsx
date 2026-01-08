@@ -13,9 +13,9 @@ interface BadgeProps extends Omit<ComponentProps, 'size'> {
 const CloseIcon = () => <i className="ki-filled ki-cross text-[10px]" />;
 
 const sizeClasses = {
-  small: 'text-[11px] px-2 py-0.5 gap-1',
-  medium: 'text-[12px] px-2.5 py-1 gap-1.5',
-  large: 'text-[13px] px-3 py-1.5 gap-2',
+  small: 'text-[11px] px-2.5 py-1.5 gap-1',
+  medium: 'text-[12px] px-3 py-2 gap-1.5',
+  large: 'text-[13px] px-3.5 py-2.5 gap-2',
 };
 
 const iconSizeClasses = {
@@ -49,12 +49,12 @@ const outlineColorClasses = {
 };
 
 const lightColorClasses = {
-  primary: 'bg-primary-50 text-primary-700',
-  secondary: 'bg-secondary-50 text-secondary-700',
-  success: 'bg-success-50 text-success-700',
-  info: 'bg-info-50 text-info-700',
-  warning: 'bg-warning-50 text-warning-700',
-  danger: 'bg-error-50 text-error-700',
+  primary: 'bg-primary-100 text-primary-500',
+  secondary: 'bg-secondary-100 text-secondary-500',
+  success: 'bg-success-100 text-success-500',
+  info: 'bg-info-100 text-info-500',
+  warning: 'bg-warning-100 text-warning-500',
+  danger: 'bg-error-100 text-error-500',
 };
 
 const dotColorClasses = {
@@ -92,7 +92,7 @@ const Badge: React.FC<BadgeProps> = ({
 
   const baseClasses = `inline-flex items-center font-medium transition-all duration-200 ${
     variant === 'outline' ? 'border' : ''
-  } ${rounded === 'full' ? 'rounded-full' : 'rounded-md'} ${sizeClasses[size]} ${getColorClasses()} ${className}`;
+  } ${rounded === 'full' ? 'rounded-full' : 'rounded'} ${sizeClasses[size]} ${getColorClasses()} ${className}`;
 
   if (variant === 'dot') {
     return (
