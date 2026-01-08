@@ -1,7 +1,5 @@
-//teaxt are component
 import React, { useState } from 'react';
 import { ComponentProps } from '@/core/types/component';
-import Typography from '../Typography';
 
 interface TextAreaProps
   extends
