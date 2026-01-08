@@ -17,12 +17,35 @@ interface NavItem {
 const navItems: NavItem[] = [
   { name: 'Dashboard', href: '/', icon: 'ki-outline ki-home' },
   {
-    name: 'Profil',
-    icon: 'ki-outline ki-profile-circle',
+    name: 'Organization',
+    icon: 'ki-outline ki-brifecase-timer',
     subItems: [
-      { name: 'Hesabım', href: '/profile', icon: 'ki-outline ki-user' },
-      { name: 'Güvenlik', href: '/security', icon: 'ki-outline ki-lock' },
-      { name: 'Bildirimler', href: '/notifications', icon: 'ki-outline ki-notification' },
+      { name: 'Organization', href: '/organization' },
+      { name: 'Organization Manager', href: '/organization/manager' },
+      { name: 'Organization Advisor', href: '/organization/advisor' },
+    ],
+  },
+  { name: 'Student', href: '/student', icon: 'ki-outline ki-teacher' },
+  { name: 'Task', href: '/task', icon: 'ki-outline ki-questionnaire-tablet' },
+  { name: 'Calendar', href: '/calendar', icon: 'ki-outline ki-calendar' },
+  {
+    name: 'Academic',
+    icon: 'ki-outline ki-book-square',
+    subItems: [
+      { name: 'University', href: '/universities' },
+      { name: 'Faculty', href: '/faculties' },
+      { name: 'Department', href: '/department' },
+      { name: 'Class', href: '/class' },
+      { name: 'Exam', href: '/exam' },
+    ],
+  },
+  {
+    name: 'Other',
+    icon: 'ki-outline ki-menu',
+    subItems: [
+      { name: 'Follow Up Reason', href: '/follow-up-reason' },
+      { name: 'Source', href: '/source' },
+      { name: 'Diploma', href: '/diploma' },
     ],
   },
 ];
@@ -48,7 +71,7 @@ const Sidebar = () => {
                 <div>
                   <button
                     onClick={() => toggleMenu(item.name)}
-                    className="hover:bg-surface-secondary flex w-full cursor-pointer items-center justify-between rounded px-4 py-2 text-[15px] text-gray-800 transition-colors duration-200"
+                    className="hover:bg-surface-secondary hover:text-primary-500 flex w-full cursor-pointer items-center justify-between rounded-xl px-4 py-2 text-[15px] text-gray-800 transition-colors duration-200"
                   >
                     <div className="flex items-center">
                       <i className={`${item.icon} mr-2 text-[16px]`}></i>
@@ -71,7 +94,7 @@ const Sidebar = () => {
                       <li key={subItem.name}>
                         <Link
                           to={subItem.href}
-                          className="hover:bg-primary-500 flex items-center rounded px-4 py-2 text-gray-600 transition-all duration-300 hover:text-white"
+                          className="hover:bg-primary-500 flex items-center rounded-xl px-4 py-2 text-gray-600 transition-all duration-200 hover:text-white"
                         >
                           {subItem.icon && (
                             <i className={`${subItem.icon} mr-2 text-[16px]`}></i>
@@ -85,7 +108,7 @@ const Sidebar = () => {
               ) : (
                 <Link
                   to={item.href!}
-                  className="hover:bg-primary-500 flex items-center rounded px-4 py-2 text-[15px] text-gray-800 transition-all duration-300 hover:text-white"
+                  className="hover:bg-primary-500 flex items-center rounded-xl px-4 py-2 text-[15px] text-gray-800 transition-all duration-200 hover:text-white"
                 >
                   <i className={`${item.icon} mr-2 text-[16px]`}></i>
                   <span className="font-medium">{item.name}</span>
