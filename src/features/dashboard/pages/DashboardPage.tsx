@@ -10,13 +10,7 @@ const DashboardPage = () => {
       <div>
         <h2 className="mb-4 text-2xl font-bold">Avatar Examples</h2>
         <div className="flex items-center gap-4">
-          <Avatar size="sm" alt="John Doe" />
-          <Avatar
-            size="md"
-            alt="John Doe"
-            src="https://randomuser.me/api/portraits/men/1.jpg"
-          />
-          <Avatar size="lg" alt="Jane Smith" />
+          <Avatar size="medium" alt="John Doe" />
         </div>
       </div>
 
