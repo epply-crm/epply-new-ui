@@ -32,7 +32,7 @@ const variantClasses = {
 };
 
 const baseStyles =
-  'w-full rounded-[6px] font-medium transition-all duration-200 ease-in-out focus:outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:bg-neutral-100';
+  'w-full rounded-[6px] outline-none focus:border-secondary-500 border border-gray-300 transition-all duration-200 ease-in-out disabled:cursor-not-allowed disabled:bg-gray-100';
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (
