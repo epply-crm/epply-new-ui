@@ -4,7 +4,7 @@ import { ComponentProps } from '@/core/types/component';
 interface InputProps
   extends
     Omit<ComponentProps, 'color'>,
-    Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+    Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'color'> {
   label?: string;
   error?: string;
   helperText?: string;
