@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import LogoURL from '../../assets/images/logo/epply-logo.png';
 import { Button, IconButton } from '@/components/ui';
+import Dropdown from '../ui/Dropdown';
+import Avatar from '../ui/Avatar';
 
 const Logo = () => {
   return (
@@ -54,12 +56,26 @@ const HeaderRightMenu = () => {
         ariaLabel="Bildirimler"
       />
 
-      <IconButton
-        icon={<i className="ki-outline ki-profile-circle"></i>}
-        variant="filled"
-        color="primary"
-        rounded
-        ariaLabel="Profil"
+      <Dropdown
+        children={<Avatar size="small" alt="Kullanıcı Avatar" />}
+        size="small"
+        options={[
+          {
+            label: 'Profil',
+            value: 'profile',
+            onClick: () => console.log('Profil clicked'),
+          },
+          {
+            label: 'Ayarlar',
+            value: 'settings',
+            href: '/settings',
+          },
+          {
+            label: 'Çıkış',
+            value: 'logout',
+            onClick: () => console.log('Çıkış clicked'),
+          },
+        ]}
       />
     </div>
   );

@@ -1,7 +1,6 @@
 //dropdown component
 import React, { useState, useRef, useEffect } from 'react';
 import { ComponentProps } from '@/core/types/component';
-import Button from '../Button';
 import { Link } from 'react-router-dom';
 
 interface Options {
@@ -14,15 +13,21 @@ interface Options {
 
 interface DropdownProps extends ComponentProps {
   options: Options[];
-  label: React.ReactNode;
+  children: React.ReactNode;
 }
 
+const fontClasses = {
+  small: 'text-[13px]',
+  medium: 'text-[15px]',
+  large: 'text-[17px]',
+};
+
 const Dropdown: React.FC<DropdownProps> = ({
-  label,
+  children,
   options,
   className,
   color,
-  size,
+  size = 'medium',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -46,24 +51,13 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <div className={`relative inline-block ${className || ''}`} ref={dropdownRef}>
-      <Button
-        onClick={toggleDropdown}
-        color={color || 'primary'}
-        rightIcon={
-          <div
-            className={`flex items-center transition-transform duration-300 ease-in-out ${
-              isOpen ? 'rotate-180' : 'rotate-0'
-            }`}
-          >
-            <i className="ki-outline ki-down"></i>
-          </div>
-        }
-        size={size}
-      >
-        {label}
-      </Button>
+      <div onClick={toggleDropdown} color={color || 'primary'}>
+        {children}
+      </div>
       {isOpen && (
-        <div className="absolute right-0 z-50 mt-2 w-48 rounded-md border border-gray-200 bg-white shadow-lg">
+        <div
+          className={`absolute right-0 z-50 mt-2 w-48 rounded-md border border-gray-200 bg-white shadow-lg ${fontClasses[size]}`}
+        >
           {options.map((option, index) => (
             <div key={index}>
               {option.href ? (
@@ -81,7 +75,7 @@ const Dropdown: React.FC<DropdownProps> = ({
                     }
                     setIsOpen(false);
                   }}
-                  className={`w-full px-4 py-2 text-left hover:bg-gray-100 cursor-pointer${
+                  className={`w-full cursor-pointer px-4 py-2 text-left hover:bg-gray-100 ${
                     option.hasLine ? 'border-t border-gray-200' : ''
                   }`}
                 >
