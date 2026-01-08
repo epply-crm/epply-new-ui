@@ -1,5 +1,5 @@
 import Avatar from '@/components/ui/Avatar';
-import Badge from '@/components/ui/Badge';
+import Progress from '@/components/ui/Progress';
 
 const DashboardPage = () => {
   return (
@@ -12,21 +12,8 @@ const DashboardPage = () => {
       </div>
 
       <div>
-        <h2 className="mb-4 text-2xl font-bold">Badge Examples</h2>
-        <div className="flex items-center gap-4">
-          <Badge variant="light" color="primary">
-            Primary Solid
-          </Badge>
-          <Badge variant="solid" color="secondary">
-            Primary Solid
-          </Badge>
-          <Badge variant="outline" color="secondary">
-            Secondary Outline
-          </Badge>
-          <Badge variant="light" color="success">
-            Success Light
-          </Badge>
-        </div>
+        <h2 className="mb-4 text-2xl font-bold">Progress Examples</h2>
+        <Progress value={52} size="large" color="primary" variant="linear" showLabel />
       </div>
     </div>
   );

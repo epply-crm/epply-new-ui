@@ -4,3 +4,4 @@ export { default as IconButton } from './IconButton';
 export { default as Select } from './Select';
 export { default as Checkbox } from './Checkbox';
 export { default as Badge } from './Badge';
+export { default as Progress } from './Progress';
