@@ -51,7 +51,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <div className={`relative inline-block ${className || ''}`} ref={dropdownRef}>
-      <div onClick={toggleDropdown} color={color || 'primary'}>
+      <div onClick={toggleDropdown} color={color || 'primary'} className="cursor-pointer">
         {children}
       </div>
       {isOpen && (
