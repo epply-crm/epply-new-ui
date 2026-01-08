@@ -8,3 +8,4 @@ export { default as Progress } from './Progress';
 export { default as Switch } from './Switch';
 export { default as Tabs } from './Tabs';
 export { default as Table } from './Table';
+export { default as Modal } from './Modal';
