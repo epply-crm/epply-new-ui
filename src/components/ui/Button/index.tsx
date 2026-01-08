@@ -29,8 +29,8 @@ const colorClasses = {
 
 const sizeClasses = {
   small: 'text-[12px] px-[12px] py-[10px]',
-  medium: 'text-[13px] px-[12px] py-[10px]',
-  large: 'text-[14px] px-[12px] py-[10px]',
+  medium: 'text-[13px] px-[14px] py-[12px]',
+  large: 'text-[14px] px-[16px] py-[14px]',
 };
 
 const baseStyles =
@@ -53,7 +53,9 @@ const Button: React.FC<ButtonProps> = ({
 
   const content = (
     <div className="flex items-center">
-      {leftIcon && !isLoading && <span className="mr-1">{leftIcon}</span>}
+      {leftIcon && !isLoading && (
+        <span className="mr-1 flex items-center">{leftIcon}</span>
+      )}
       <>
         {isLoading ? (
           <>
@@ -63,7 +65,9 @@ const Button: React.FC<ButtonProps> = ({
           children
         )}
       </>
-      {rightIcon && !isLoading && <span className="ml-1">{rightIcon}</span>}
+      {rightIcon && !isLoading && (
+        <span className="ml-1 flex items-center">{rightIcon}</span>
+      )}
     </div>
   );
 
