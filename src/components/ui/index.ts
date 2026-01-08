@@ -6,3 +6,4 @@ export { default as Checkbox } from './Checkbox';
 export { default as Badge } from './Badge';
 export { default as Progress } from './Progress';
 export { default as Switch } from './Switch';
+export { default as Tabs } from './Tabs';
