@@ -2,13 +2,12 @@ import React from 'react';
 import { ComponentProps } from '@/core/types/component';
 import { Link } from 'react-router-dom';
 
-interface IconButtonProps extends Omit<ComponentProps, 'color'> {
+interface IconButtonProps extends ComponentProps {
   icon: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
   to?: string;
   variant?: 'filled' | 'outlined' | 'ghost';
-  color?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger' | 'neutral';
   rounded?: boolean;
   ariaLabel?: string;
 }
