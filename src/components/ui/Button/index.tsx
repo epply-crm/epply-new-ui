@@ -25,6 +25,8 @@ const colorClasses = {
     'bg-warning-500 text-white hover:bg-warning-600 active:bg-warning-900 disabled:bg-warning-200 disabled:text-gray-600',
   danger:
     'bg-error-500 text-white hover:bg-error-600 active:bg-error-900 disabled:bg-error-200 disabled:text-gray-600',
+  neutral:
+    'bg-neutral-200 text-neutral-700 hover:bg-neutral-300 active:bg-neutral-400 disabled:bg-neutral-100 disabled:text-neutral-400',
 };
 
 const sizeClasses = {

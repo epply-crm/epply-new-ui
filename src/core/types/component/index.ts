@@ -1,5 +1,5 @@
 export interface ComponentProps {
-    className?: string;
-    color?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger';
-    size?: 'small' | 'medium' | 'large';
+  className?: string;
+  color?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger' | 'neutral';
+  size?: 'small' | 'medium' | 'large';
 }
