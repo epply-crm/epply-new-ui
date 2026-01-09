@@ -58,8 +58,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     const shouldShowToggle = isPasswordType && showPasswordToggle;
 
     const inputStyles = `${baseStyles} ${sizeClasses[size]} ${variantClasses[variant]} ${className || ''} ${
-      leftIcon ? 'pl-10' : ''
-    } ${rightIcon || shouldShowToggle ? 'pr-10' : ''} ${error ? 'border-error-500 focus:ring-error-500' : ''}`;
+      leftIcon ? 'pl-8' : ''
+    } ${rightIcon || shouldShowToggle ? 'pr-8' : ''} ${error ? 'border-error-500 focus:ring-error-500' : ''}`;
 
     const containerStyles = `${fullWidth ? 'w-full' : 'inline-block'}`;
 

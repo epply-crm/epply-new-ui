@@ -60,7 +60,7 @@ const variantClasses = {
 };
 
 const baseStyles =
-  'w-full rounded-[6px] font-medium transition-all duration-200 ease-in-out focus:outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:bg-neutral-100 cursor-pointer';
+  'rounded-[6px] font-medium transition-all duration-200 ease-in-out focus:outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:bg-neutral-100 cursor-pointer';
 
 const Select: React.FC<SelectProps> = ({
   label,
@@ -184,8 +184,8 @@ const Select: React.FC<SelectProps> = ({
   };
 
   const buttonStyles = `${baseStyles} ${sizeClasses[size]} ${variantClasses[variant]} ${className || ''} ${
-    leftIcon ? 'pl-10' : ''
-  } ${rightIcon || isOpen ? 'pr-10' : 'pr-10'} ${error ? 'border-error-500' : ''} ${
+    leftIcon ? 'pl-3' : ''
+  } ${rightIcon || isOpen ? 'pr-3' : 'pr-3'} ${error ? 'border-error-500' : ''} ${
     isOpen ? 'border-primary-500' : ''
   } flex items-center justify-between`;
 
@@ -252,7 +252,7 @@ const Select: React.FC<SelectProps> = ({
             )}
           </span>
           <span
-            className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+            className={`flex items-center justify-center transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           >
             {rightIcon || <ChevronDownIcon />}
           </span>
