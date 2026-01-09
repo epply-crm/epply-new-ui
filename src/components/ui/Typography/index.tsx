@@ -12,6 +12,7 @@ interface TypographyProps {
     | 'gray';
   children?: React.ReactNode;
   weight?: 'light' | 'normal' | 'medium' | 'bold' | 'semibold';
+  className?: string;
 }
 
 const Typography: React.FC<TypographyProps> = ({
@@ -19,10 +20,15 @@ const Typography: React.FC<TypographyProps> = ({
   color = 'black',
   weight = 'normal',
   children,
+  className,
 }) => {
   const textSize = variantToTextSizeConvertor(variant);
   const Tag = variant;
-  return <Tag className={`text-${color} font-${weight} ${textSize}`}>{children}</Tag>;
+  return (
+    <Tag className={`text-${color} font-${weight} ${textSize} ${className}`}>
+      {children}
+    </Tag>
+  );
 };
 
 const variantToTextSizeConvertor = (variant: string) => {
